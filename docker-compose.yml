@@ -5,7 +5,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./php/Dockerfile
     image: digitalocean.com/php
     container_name: app
     restart: unless-stopped
@@ -29,7 +29,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-  volumes:
+    volumes:
       - ./:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
     networks:
