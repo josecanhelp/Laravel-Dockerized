@@ -22,3 +22,7 @@ Boot up the application using Docker
 Generate an application key
 
 `docker-compose exec app php artisan key:generate`
+
+Tear it all down
+
+`docker-compose down`
